@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;500&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffc7ea;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-size: 50px;
+        z-index: 9999;
+        animation: pulse infinite;
+        animation-duration: 2s;
+        text-align: center;
+      }
+
+      .quote {
+        background-color: #793fdf;
+        color: black;
+        padding: 50px 35px;
+        border-radius: 15px;
+        max-width: 80%;
+        font-size: 40px;
+        width: 60%;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(11.5px);
+        -webkit-backdrop-filter: blur(11.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: relative;
+        top: 20px;
+        min-height: 200px;
+      }
+
+      .item {
+        position: absolute;
+        top: 0;
+        width: 500px;
+        z-index: 0;
+        transform: rotate(-20deg);
+      }
+
+      .item1 {
+        top: -300px;
+        right: -450px;
+        width: 1000px;
+      }
+
+      .item2 {
+        left: 150px;
+        top: 30px;
+        width: 200px;
+      }
+
+      .item svg {
+        position: relative;
+        animation: floating 3s infinite ease-in-out;
+        -webkit-animation: floating 3s infinite ease-in-out;
+        animation-duration: 5s;
+      }
+
+      .item2 svg {
+        animation-delay: 0.5s;
+        animation-duration: 3s;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0px);
+        }
+
+        50% {
+          transform: translate(0, 30px);
+        }
+
+        100% {
+          transform: translate(0, -0px);
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-top: 40px;
+      }
+
+      .images {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .images img {
+        margin: 20px 0;
+      }
+
+      @media screen and (max-width:700px) {
+        .quote {
+          font-size: 1.1rem;
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+
+        .item1 {
+          top: -300px;
+          right: -650px;
+          width: 1000px;
+        }
+  
+        .item2 {
+          left: -55px;
+          top: 130px;
+          width: 200px;
+        }
+
+        .images {
+          flex-direction: column;
+        }
+      }
